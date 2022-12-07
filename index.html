@@ -14,5 +14,26 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Binary to Decimal converter</h1>
+      </header>
+
+      <form id="form">
+        <input
+          type="text"
+          title="binary input"
+          id="form-input"
+          autocomplete="off"
+        />
+        <button type="submit">convert</button>
+      </form>
+
+      <div id="results">
+        <p>Binary input: <span id="binary">-</span></p>
+        <p>Decimal output: <span id="decimal">-</span></p>
+      </div>
+    </div>
+  </body>
 </html>

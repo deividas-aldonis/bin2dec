@@ -8,5 +8,39 @@
 }
 
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  background-color: #e1eef3;
+
   font-family: "Roboto", sans-serif;
+}
+
+input,
+button {
+  font-size: 16px;
+
+  padding: 4px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 24px;
+
+  background-color: #fff;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.success {
+  outline-color: green;
+}
+
+.error {
+  outline-color: red;
 }
