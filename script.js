@@ -3,6 +3,7 @@ const input = document.getElementById("form-input");
 
 const binaryResultDisplay = document.getElementById("binary");
 const decimalResultDisplay = document.getElementById("decimal");
+const errorMessage = document.querySelector(".error-message");
 
 let isInputValid = false;
 
@@ -32,5 +33,14 @@ form.addEventListener("submit", (e) => {
 
 input.addEventListener("input", (e) => {
   isInputValid = /^[01]{1,8}$/.test(e.target.value);
-  e.target.classList = isInputValid ? "success" : "error";
+
+  if (!isInputValid) {
+    errorMessage.textContent = `input can contain only 1's and 0's and length has to be between 1-8`;
+    errorMessage.classList.remove("hide");
+    e.target.classList = "error";
+  } else {
+    errorMessage.textContent = "";
+    errorMessage.classList.add("hide");
+    e.target.classList = "success";
+  }
 });

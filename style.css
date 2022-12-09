@@ -9,6 +9,7 @@
 
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -43,4 +44,18 @@ button {
 
 .error {
   outline-color: red;
+}
+
+.error-message {
+  padding: 12px;
+  margin-bottom: 24px;
+
+  color: red;
+  background-color: #fff;
+
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.hide {
+  visibility: hidden;
 }
